@@ -1,0 +1,12 @@
+$  git config --global user "dorra_laroussi"
+$  git config --global user.name "dorra_laroussi"
+cd DESKTOP
+cd Portfolio_Dorra
+git init
+git branch -M main
+$ git add .
+$ git status
+$ git commit -m "finale"
+$ git log
+git remote add origin https://github.com/Dorra05/Checkpoint_Express_Routing.git
+$ git push -u origin main
