@@ -1,15 +1,29 @@
-let express=require('express');
-require('dotenv').config();
-let {connect}=require('./Database/connect');
-let newroute=require('./routers/router')
+const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const cors = require("cors");
 
-let app=express();
+dotenv.config();
+const app = express();
 
-
+// Middleware
 app.use(express.json());
-app.use(newroute.route);
-connect();
+app.use(cors());
 
-app.listen(process.env.PORT, (err)=>{
-    console.log(`Server is run on http://localhost${process.env.PORT}`);
+// Connexion à MongoDB
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 })
+.then(() => console.log(" Connexion réussie à MongoDB !"))
+.catch(err => console.error(" Erreur de connexion à MongoDB :", err));
+
+// Importation des routes
+const userRoutes = require("./routes/userRoutes");
+app.use("/api", userRoutes); // Vérifie bien cette ligne
+
+// Démarrage du serveur
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+    console.log(`🚀 Serveur en cours d'exécution sur http://localhost:${PORT}`);
+});

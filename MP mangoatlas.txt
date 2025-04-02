@@ -1,1 +1,7 @@
-ALZguJ9wOBk6qu9k
+Username
+out051280
+Password
+xTU2AF8TtjjQgkt5
+
+-----------------------
+MONGO_URI=mongodb+srv://out051280:xTU2AF8TtjjQgkt5@cluster0.pvximbv.mongodb.net/sample_mflix?retryWrites=true&w=majority&appName=Cluster0

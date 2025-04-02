@@ -1,0 +1,10 @@
+.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 10px;
+  }
+  

@@ -1,11 +1,29 @@
-let mongoose=require('mongoose');
+const mongoose = require("mongoose");
 
-let schema = new mongoose.Schema(
-    {
-        name:{type:String},
-        age:{type:Number},
-        email:{type:String}
+const userSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    age: {
+        type: Number,
+        required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
+    updatedAt: {
+        type: Date,
+        default: Date.now
     }
-)
-let model = mongoose.model('RestAPI',schema);
-module.exports={model};
+});
+
+const User = mongoose.model("User", userSchema);
+
+module.exports = User;
