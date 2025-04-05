@@ -1,0 +1,10 @@
+✅ Frontend (React) et Backend (Node.js + Express + MongoDB)
+✅ Navbar avec liens vers les réservations et paiements
+✅ Gestion des réservations et paiements
+✅ React Router pour la navigation
+
+backend routes API
+backend des modèles (MongoDB + Mongoose)
+
+Mise en place du Frontend
+ Créer l’application React

@@ -1,0 +1,71 @@
+travaille demande :le projet Backend & Frontend, avec Redux, API et Navbar Bootstrap.
+----------------------------------------------------------------------------------------------
+✅ Frontend (React) et Backend (Node.js + Express + MongoDB)
+✅ Navbar avec liens vers les réservations et paiements
+✅ Gestion des réservations et paiements
+✅ React Router pour la navigation
+
+backend routes API
+backend des modèles (MongoDB + Mongoose)
+
+Mise en place du Frontend
+ Créer l’application React
+✅ Navbar horizontale Bootstrap
+✅ Authentification (Inscription & Connexion)
+✅ Gestion des réservations et paiements
+✅ Modal pour afficher les services
+✅ Redux pour gérer l’état global
+✅ Utilisation de l’API avec Axios
+✅ Tests avec Thunder Client
+-----------------------------------------------------------------------------------------------
+🔹 Frontend (React) :
+✅ Navbar horizontale avec Bootstrap
+✅ Authentification (inscription & connexion)
+✅ Gestion des services avec Modal
+✅ Réservations et paiements
+✅ Redux pour gérer l’état global
+✅ Utilisation d’Axios pour communiquer avec l’API
+
+🔹 Backend (Node.js + Express + MongoDB) :
+✅ API pour la gestion des clients, chiens, réservations et paiements
+✅ Sécurisation des routes avec JWT (authentification)
+✅ Tests avec Thunder Client
+Je vais maintenant générer le code complet du projet dans VS Code. 🚀
+
+ 
+👉 Prochaines étapes :
+
+    Ajout des composants Auth, Services, Réservations, Paiements
+
+    Implémentation des appels API avec Axios
+
+    Finalisation avec Modal et Thunder Client
+_____________________________________________________________________________________________________________________________
+
+Le state Redux pour user et token permet de stocker et gérer les informations de l’utilisateur connecté dans l’application.
+Pourquoi utiliser Redux pour user & token ?
+
+✅ Stocker l'utilisateur connecté → pour l'afficher partout dans l'app.
+✅ Garder le token d'authentification → pour sécuriser les requêtes API.
+✅ Éviter de stocker le token dans localStorage uniquement → plus sécurisé.
+________________________________________________________________________________________________________________________________
+Le Redux Store est uniquement utilisé dans le Frontend (React).
+Pourquoi Redux est dans le Frontend ?
+
+✅ Redux gère l’état global côté client (React).
+✅ Il stocke des données comme l’utilisateur connecté, le token, les réservations, etc.
+✅ Le Backend (Node.js + Express) expose juste des API pour envoyer et recevoir des données.
+___________________________________________________________________________________________________________________________________
+client/
+│── src/
+│   ├── store.js  <-- 🔥 Fichier du Redux Store
+│   ├── reducers/
+│   │   ├── authReducer.js
+│   │   ├── reservationReducer.js
+│   ├── actions/
+│   │   ├── authActions.js
+│   │   ├── reservationActions.js
+│   ├── components/
+│   ├── pages/
+│   ├── App.js
+│   ├── index.js  <-- 🔥 Ajoute le `<Provider store={store}>`

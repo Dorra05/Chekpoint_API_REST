@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "es6",  // Utilisez es6 ou esnext pour des fonctionnalités modernes de JS
+      "lib": ["dom", "es6"],  // Ajoutez des bibliothèques récentes si nécessaire
+      "jsx": "react-jsx",  // Pour React 17 et plus récent
+      "module": "esnext",  // Permet l'utilisation des modules ES6
+      "moduleResolution": "node",  // Résolution de module selon Node.js
+      "esModuleInterop": true,  // Assurez-vous que CommonJS fonctionne bien
+      "skipLibCheck": true,  // Accélère la compilation (vous pouvez le désactiver si nécessaire)
+      "forceConsistentCasingInFileNames": true  // Vérifie la cohérence de la casse des fichiers
+    },
+    "include": ["src"]  // Inclut tous les fichiers dans le dossier src pour la compilation
+  }
+  

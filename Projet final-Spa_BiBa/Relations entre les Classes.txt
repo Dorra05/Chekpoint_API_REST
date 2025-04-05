@@ -1,0 +1,35 @@
+Relations entre les Classes :
+
+    Client à Chien : Un Client peut avoir plusieurs Chiens.
+
+        Relation : 1 à N (Un client peut avoir plusieurs chiens)
+
+    Client à Réservation : Un Client peut effectuer plusieurs Réservations.
+
+        Relation : 1 à N (Un client peut avoir plusieurs réservations)
+
+    Réservation à Chien : Une Réservation est associée à un Chien spécifique.
+
+        Relation : 1 à 1 (Une réservation est faite pour un chien spécifique)
+
+    Réservation à Service : Une Réservation peut concerner un Service spécifique (ex : bain, coupe de poils).
+
+        Relation : 1 à N (Une réservation peut concerner plusieurs services)
+
+    Réservation à Facture : Une Réservation génère une Facture.
+
+        Relation : 1 à 1 (Chaque réservation génère une facture)
+
+    Facture à Paiement : Une Facture est réglée via un Paiement.
+
+        Relation : 1 à 1 (Chaque facture est payée via un paiement)
+
+Rôles admin:
+
+Gérer les clients (ajouter, modifier, supprimer des comptes).
+
+Gérer les réservations (valider, annuler, modifier).
+
+Gérer les services (ajouter de nouveaux soins, fixer des prix).
+
+Superviser les paiements et factures.

@@ -1,0 +1,11 @@
+0. Lancer l’application
+
+Dans un terminal :
+
+cd backend
+node server.js
+
+Dans un autre terminal :
+
+cd frontend
+npm start

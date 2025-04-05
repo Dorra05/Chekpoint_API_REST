@@ -1,0 +1,42 @@
+@startuml
+entity "Gymnase" {
++ ID_Gymnase : int
++ Nom : string
++ Adresse : string
++ Téléphone : string
+}
+
+entity "Membre" {
++ ID_Membre : int
++ Nom : string
++ Prénom : string
++ Adresse : string
++ Date_naissance : date
++ Genre : string
+}
+
+entity "Session" {
++ ID_Session : int
++ Type_de_sport : string
++ Horaire : string
++ Capacité_max : int
+}
+
+entity "Coach" {
++ ID_Coach : int
++ Nom : string
++ Prénom : string
++ Âge : int
++ Spécialité : string
+}
+
+entity "Participation" {
++ ID_Participation : int
+}
+
+Gymnase ||--o{ Membre : a
+Gymnase ||--o{ Session : a
+Session ||--o{ Participation : a
+Membre ||--o{ Participation : a
+Session ||--o{ Coach : a
+@enduml
